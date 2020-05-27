@@ -9,13 +9,6 @@ from matplotlib import pyplot as plt
 # Notes:
 # Calculations are in radians for this file
 
-# TODO:
-# Consider Solar irradiance
-# https://en.wikipedia.org/wiki/Solar_irradiance
-# Consider minimum wattage threshold
-# Consider frequence breakdown
-# GHI vs POA?
-
 # Curious:
 # What's the angular precision of the best CCD?
 
@@ -28,7 +21,7 @@ from matplotlib import pyplot as plt
 # monocrystalline silicon
 # 22.4% efficient for testing, 23.7% on the car
 # meter voltage and current
-# 
+#
 
 def projected_area(area, theta):
     # https://en.wikipedia.org/wiki/Projected_area
