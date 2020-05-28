@@ -1,3 +1,6 @@
+# The goal here was to calculate the overall energy captured between times for a particular angle.
+# Calculations are in radians for this file
+
 import numpy as np
 import pandas as pd
 import datetime
@@ -5,23 +8,6 @@ import pvlib
 import tables
 from matplotlib import pyplot as plt
 # python3 -m pip install tables
-
-# Notes:
-# Calculations are in radians for this file
-
-# Curious:
-# What's the angular precision of the best CCD?
-
-# Resources:
-# Topeka irradiance
-# https://kcc.ks.gov/images/PDFs/charts/Solar_KansasSolarRadiationMap.pdf
-# https://www.e-education.psu.edu/eme810/sites/www.e-education.psu.edu.eme810/files/images/Lesson_04/Aniso_Components_rev.png
-# https://www.suncalc.org/#/38.9325,-95.6784,8/2020.07.13/18:00/1/3
-
-# monocrystalline silicon
-# 22.4% efficient for testing, 23.7% on the car
-# meter voltage and current
-#
 
 def projected_area(area, theta):
     # https://en.wikipedia.org/wiki/Projected_area

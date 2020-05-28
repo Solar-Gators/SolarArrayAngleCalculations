@@ -59,6 +59,7 @@ def test():
     lat, lon = 29.6483, -82.3494 #UF
     date = datetime.datetime(2020, 5, 27, 12, 13, 1, 130320, tzinfo=datetime.timezone.utc)
 
+    # Calculate the same thing with different libraries to verify
     print( get_pos_pysolar(lat, lon, date) )
     print( get_pos_pvlib(lat, lon, date) )
     print( get_pos_ephem(lat,lon,date) )
@@ -74,6 +75,7 @@ def get_pos_hours(f):
 def plot():
     fs = [get_pos_pysolar, get_pos_pvlib, get_pos_ephem, get_pos_pyephem_sunpath]
     for i in range(len(fs)):
+        # offset so that they can be seen as separate graphs
         plt.plot(get_pos_hours(fs[i])+i*4)
     plt.xticks(range(24))
     plt.axis([0,23,-50,400])

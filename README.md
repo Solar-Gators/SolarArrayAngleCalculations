@@ -14,3 +14,8 @@ The goal is to determine the optimal angle to set the solar array for the UF sol
   * Consider light frequency breakdown
   * GHI vs POA?
   * Consider unlevel ground (screws with angles)
+  * Does the type of solar cell make a difference?  Currently using monocrystalline silicon ~23%.
+
+## Resources:
+  * [Topeka irradiance](https://kcc.ks.gov/images/PDFs/charts/Solar_KansasSolarRadiationMap.pdf)
+  * [Topeka Suncalc](https://www.suncalc.org/#/38.9325,-95.6784,8/2020.07.13/18:00/1/3)
