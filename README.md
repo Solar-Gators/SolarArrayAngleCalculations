@@ -4,9 +4,15 @@ The goal is to determine the optimal angle to set the solar array for the UF sol
 
 Check out Kelly's [angle calculations](AngleCalculations.pdf)
 
-## Usage
-  * Inputs: Latitude, Longitude, Altitude, times
+## Ideal Usage
+  * Inputs: Latitude, Longitude, Altitude, Times (Y:M:D h:m:s)
   * Output: Optimal angle for time window that maximizes energy capture
+
+## Current Status
+  * Onboarding in progress
+  * srcpy/sun_angle_test.py Example sun position calculations
+  * srcpy/pv_sim.py Example irradiance calculation from pvlib's gallery
+  * Discussion of Matlab version(s)
 
 ## Extras
   * Consider [solar irradiance](https://en.wikipedia.org/wiki/Solar_irradiance) (diffuse, etc)
@@ -15,6 +21,7 @@ Check out Kelly's [angle calculations](AngleCalculations.pdf)
   * GHI vs POA?
   * Consider unlevel ground (screws with angles)
   * Does the type of solar cell make a difference?  Currently using monocrystalline silicon ~23%.
+  * Turn it into a phone/web app?
 
 ## Resources
   * [Topeka irradiance](https://kcc.ks.gov/images/PDFs/charts/Solar_KansasSolarRadiationMap.pdf)
