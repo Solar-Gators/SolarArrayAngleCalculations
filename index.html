@@ -10,14 +10,19 @@
         coords = p.coords
         document.getElementById('pos').innerHTML = "(lat,lon) = ("
           +coords["latitude"]+","+coords["longitude"]+")"
+        update_azalt(60)
       })
+
+      function update_azalt(val){
+        azalt = get_pos(val, coords)
+        document.getElementById('azalt').innerHTML =
+          "az, alt = " + azalt[0].toFixed(4) + ", " + azalt[1].toFixed(4)
+      }
 
       function sliderChange(val) {
         document.getElementById('sliderVal').innerHTML =
           Math.floor(val/60)+" hours "+ val%60 + " mins"
-        azalt = get_pos(val, coords)
-        document.getElementById('azalt').innerHTML =
-          azalt[0].toFixed(4) + ", " + azalt[1].toFixed(4)
+        update_azalt(val)
       }
     </script>
     <title>Solar Position</title>
