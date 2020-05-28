@@ -1,1 +1,33 @@
-Test
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="srcjs/bundle.js"></script>
+    <script type="text/javascript">
+      var coords
+      navigator.geolocation.getCurrentPosition(p => {
+        console.log(p.coords)
+        coords = p.coords
+        document.getElementById('pos').innerHTML = "(lat,lon) = ("
+          +coords["latitude"]+","+coords["longitude"]+")"
+      })
+
+      function sliderChange(val) {
+        document.getElementById('sliderVal').innerHTML =
+          Math.floor(val/60)+" hours "+ val%60 + " mins"
+        azalt = get_pos(val, coords)
+        document.getElementById('azalt').innerHTML =
+          azalt[0].toFixed(4) + ", " + azalt[1].toFixed(4)
+      }
+    </script>
+    <title>Solar Position</title>
+  </head>
+  <body>
+      <h1>Solar Position Example Calculation</h1>
+      <div id="pos"></div>
+      <input id="slider" type="range" min="0" max="600" step="10" value="60" oninput="sliderChange(this.value)">
+      <br>
+      The solar position in <div id="sliderVal">1 hours 0 mins</div>
+      will be <div id="azalt"></div>
+  </body>
+</html>
