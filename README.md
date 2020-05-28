@@ -4,6 +4,8 @@ The goal is to determine the optimal angle to set the solar array for the UF sol
 
 Check out Kelly's [angle calculations](AngleCalculations.pdf)
 
+Check out an initial [web prototype](https://solar-gators.github.io/SolarArrayAngleCalculations/) using [suncalc2](https://www.npmjs.com/package/suncalc2).
+
 ## Ideal Usage
   * Inputs: Latitude, Longitude, Altitude, Times (Y:M:D h:m:s)
   * Output: Optimal angle for time window that maximizes energy capture
